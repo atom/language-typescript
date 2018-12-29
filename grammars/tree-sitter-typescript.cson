@@ -72,6 +72,7 @@ scopes:
   '
     jsx_opening_element > identifier,
     jsx_closing_element > identifier,
+    jsx_self_closing_element > identifier,
     call_expression > identifier
   ': [
     {
@@ -206,9 +207,10 @@ scopes:
   '"get"': 'keyword.operator.setter'
   '"set"': 'keyword.operator.setter'
 
-  '"."': 'meta.delimiter'
-  '","': 'meta.delimiter'
+  '"."': 'meta.delimiter.period'
+  '","': 'meta.delimiter.comma'
 
+  '"as"': 'keyword.control'
   '"if"': 'keyword.control'
   '"do"': 'keyword.control'
   '"else"': 'keyword.control'
@@ -247,7 +249,6 @@ scopes:
     function_signature > identifier
   ': 'entity.name.function'
 
-  '"as"': 'keyword.modifier'
   '"implements"': 'keyword.modifier'
   '"namespace"': 'keyword.modifier'
   '"enum"': 'keyword.modifier'
@@ -256,5 +257,6 @@ scopes:
   '"declare"': 'keyword.modifier'
   '"public"': 'keyword.modifier'
   '"private"': 'keyword.modifier'
+  '"protected"': 'keyword.modifier'
   'readonly': 'keyword.modifier'
   '"type"': 'keyword.modifier'
