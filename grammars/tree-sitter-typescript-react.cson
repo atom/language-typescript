@@ -1,9 +1,9 @@
-name: 'TypeScript'
-scopeName: 'source.ts'
+name: 'TypeScriptReact'
+scopeName: 'source.tsx'
 type: 'tree-sitter'
 parser: 'tree-sitter-typescript'
 
-fileTypes: ['ts']
+fileTypes: ['tsx']
 
 comments:
   start: '// '
