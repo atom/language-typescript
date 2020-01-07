@@ -5,6 +5,8 @@ parser: 'tree-sitter-typescript/typescript'
 
 fileTypes: ['ts']
 
+injectionRegex: '^ts$|^TS$|typescript|TypeScript'
+
 comments:
   start: '// '
 
