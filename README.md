@@ -1,6 +1,7 @@
-# TypeScript language support in Atom
-<!--[![macOS Build Status](https://travis-ci.org/atom/language-typescript.svg?branch=master)](https://travis-ci.org/atom/language-typescript)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/ktooccwna96ssiyr/branch/master?svg=true)](https://ci.appveyor.com/project/Atom/language-javascript-dijf8/branch/master)-->
+##### Atom and all repositories under Atom will be archived on December 15, 2022. Learn more in our [official announcement](https://github.blog/2022-06-08-sunsetting-atom/)
+ # TypeScript language support in Atom
+[![CI](https://github.com/atom/language-typescript/actions/workflows/ci.yml/badge.svg)](https://github.com/atom/language-typescript/actions/workflows/ci.yml)
+
 [![Dependency Status](https://david-dm.org/atom/language-typescript.svg)](https://david-dm.org/atom/language-typescript)
 
 Adds syntax highlighting and snippets for TypeScript in Atom.

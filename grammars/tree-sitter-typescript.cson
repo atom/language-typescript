@@ -1,9 +1,9 @@
 name: 'TypeScript'
 scopeName: 'source.ts'
 type: 'tree-sitter'
-parser: 'tree-sitter-typescript'
+parser: 'tree-sitter-typescript/typescript'
 
-fileTypes: ['ts', 'tsx']
+fileTypes: ['ts']
 
 comments:
   start: '// '
@@ -11,16 +11,6 @@ comments:
 folds: [
   {
     type: 'comment'
-  }
-  {
-    type: ['jsx_element', 'template_string']
-    start: {index: 0}
-    end: {index: -1}
-  }
-  {
-    type: 'jsx_self_closing_element'
-    start: {index: 1}
-    end: {index: -2}
   }
   {
     type: [
@@ -70,8 +60,6 @@ scopes:
   ': 'support.type'
 
   '
-    jsx_opening_element > identifier,
-    jsx_closing_element > identifier,
     call_expression > identifier
   ': [
     {
@@ -131,8 +119,6 @@ scopes:
   'hash_bang_line': 'comment.block'
 
   '
-    jsx_expression > "{",
-    jsx_expression > "}",
     template_substitution > "${",
     template_substitution > "}"
   ': 'punctuation.section.embedded'
@@ -206,9 +192,10 @@ scopes:
   '"get"': 'keyword.operator.setter'
   '"set"': 'keyword.operator.setter'
 
-  '"."': 'meta.delimiter'
-  '","': 'meta.delimiter'
+  '"."': 'meta.delimiter.period'
+  '","': 'meta.delimiter.comma'
 
+  '"as"': 'keyword.control'
   '"if"': 'keyword.control'
   '"do"': 'keyword.control'
   '"else"': 'keyword.control'
@@ -233,11 +220,6 @@ scopes:
   '"debugger"': 'keyword.control'
   '"delete"': 'keyword.control'
 
-  'jsx_attribute > property_identifier': 'entity.other.attribute-name'
-  'jsx_opening_element > identifier': 'entity.name.tag'
-  'jsx_closing_element > identifier': 'entity.name.tag'
-  'jsx_self_closing_element > identifier': 'entity.name.tag'
-
   'class > identifier': 'support.storage.type'
   'type_identifier': 'support.storage.type'
   'predefined_type': 'support.storage.type'
@@ -247,7 +229,6 @@ scopes:
     function_signature > identifier
   ': 'entity.name.function'
 
-  '"as"': 'keyword.modifier'
   '"implements"': 'keyword.modifier'
   '"namespace"': 'keyword.modifier'
   '"enum"': 'keyword.modifier'
@@ -256,5 +237,6 @@ scopes:
   '"declare"': 'keyword.modifier'
   '"public"': 'keyword.modifier'
   '"private"': 'keyword.modifier'
+  '"protected"': 'keyword.modifier'
   'readonly': 'keyword.modifier'
   '"type"': 'keyword.modifier'
